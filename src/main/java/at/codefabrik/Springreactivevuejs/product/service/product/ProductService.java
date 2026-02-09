@@ -82,7 +82,6 @@ public class ProductService {
         BigDecimal eurPrice = null;
         if(productEs.getPriceMapEs() != null) {
             chfPrice = productEs.getPriceMapEs().get(MoneySymbol.CHF);
-            //eurPrice = productEs.getPriceMapEs().get(MoneySymbol.EUR);
         }
 
         ProductResponse response = ProductResponse.builder()
@@ -108,12 +107,10 @@ public class ProductService {
                 //.price(price != null ? price.getPrice() : null)
                 //.price(productPriceService.getByMoneyType(productEs.getId(), MoneySymbol.CHF))
                 .price(chfPrice)
-                //.price(eurPrice)
                 //.price(productEs.getPriceMapEs().get(MoneySymbol.CHF.getSymbol()))
                 //TODO: Über Client request sollte validiert werden, welche Währung gewünscht ist.
                 //.moneySymbol(price != null ? price.getMoneySymbol() : null)
                 .moneyType(MoneySymbol.CHF.getSymbol())
-                //.moneyType(MoneySymbol.EUR.getSymbol())
                 .active(productEs.isActive())
                 .build();
         return response;
@@ -153,7 +150,6 @@ public class ProductService {
                     //.price(item.getPrices().get("CHF"))
                     //.price(item.getPriceMapEs().get(MoneySymbol.CHF))
                     .price(chfPrice)
-                    //.price(eurPrice)
                     .moneyType(MoneySymbol.CHF.getSymbol())
                     .build();
         });
