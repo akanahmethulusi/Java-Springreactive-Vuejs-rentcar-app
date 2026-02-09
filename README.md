@@ -5,7 +5,7 @@ Der Fokus liegt auf **skalierbarer Architektur**, **Full-Text-Suche** und **klar
 
 ---
 
-<img width="1468" height="829" alt="Bildschirmfoto 2026-02-05 um 12 04 43" src="https://github.com/user-attachments/assets/c7b12cb1-1ed4-4644-a1dd-1ea7059a0d3a" />
+<img width="1466" height="831" alt="Bildschirmfoto 2026-02-09 um 13 18 03" src="https://github.com/user-attachments/assets/bbcc0b83-7a18-4816-8fc9-c438851b351c" />
 
 <img width="1383" height="828" alt="Bildschirmfoto 2026-02-05 um 12 05 05" src="https://github.com/user-attachments/assets/c2113f76-3fd3-4b36-b65e-4b445a86c3a0" />
 
