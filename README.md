@@ -4,17 +4,22 @@ Moderne **E-Commerce Webanwendung** mit **Spring Boot (Java 21, Reactive)** im B
 Der Fokus liegt auf **skalierbarer Architektur**, **Full-Text-Suche** und **klarer Trennung von Domänen**.
 
 ---
-
+Produkt List:
 <img width="1466" height="831" alt="Bildschirmfoto 2026-02-09 um 13 18 03" src="https://github.com/user-attachments/assets/bbcc0b83-7a18-4816-8fc9-c438851b351c" />
 
+Produkt Detail:
 <img width="1383" height="828" alt="Bildschirmfoto 2026-02-05 um 12 05 05" src="https://github.com/user-attachments/assets/c2113f76-3fd3-4b36-b65e-4b445a86c3a0" />
 
+S3-Objekt Store:
 <img width="1435" height="788" alt="Bildschirmfoto 2026-02-05 um 12 05 37" src="https://github.com/user-attachments/assets/7af043c8-92ea-4724-b589-d5648c2968b1" />
 
+Backend-Produkt List:
 <img width="1089" height="875" alt="Bildschirmfoto 2026-02-05 um 12 05 56" src="https://github.com/user-attachments/assets/9431b851-8dcf-40f8-a28d-dd822807fe05" />
 
+Elasticsearch:
 <img width="996" height="777" alt="Bildschirmfoto 2026-02-05 um 12 08 13" src="https://github.com/user-attachments/assets/5813e602-f190-4289-b224-980f3016e0d5" />
 
+MongoDB:
 <img width="1442" height="740" alt="Bildschirmfoto 2026-02-05 um 12 09 07" src="https://github.com/user-attachments/assets/bc504c8d-bbb5-4082-b4d7-71bd342f5679" />
 
 
@@ -111,11 +116,11 @@ Spring Boot API (Reactive)
 
 ## 🐳 Docker Setup
 
-MongoDB, Elasticsearch und Redis laufen über Docker Compose.
+MongoDB, Elasticsearch und Redis laufen über über Docker Compose.
 
-```bash
+bash command:
 cd src/main/resources
-docker-compose up -d
+docker compose up -d
 
 
 
@@ -128,7 +133,7 @@ StartDemo/
 
 
 🎨 Frontend – Setup
-Installation
+Installation:
 
 npm install -g @vue/cli
 vue create webui
@@ -140,9 +145,11 @@ Frontend läuft unter:
 
 http://localhost:8080
 
+
 🔗 API-Kommunikation (Axios)
 
 yarn add axios vue-axios
+
 
 main.js
 
@@ -154,18 +161,28 @@ import VueAxios from 'vue-axios'
 axios.defaults.baseURL = 'http://localhost:8080'
 createApp(App).use(VueAxios, axios).mount('#app')
 
+
 🧭 Routing
 
 Produktliste
 
-Produktdetailsvue add router
+Produktdetails
+Command:
+
+vue add router
+
+
 
 🛠️ Vue Best Practices
-Zweck	Vue Feature
-State	data()
-Berechnete Werte	computed
-Logik	methods
-Listen	v-for
+
+| Zweck            | Vue Feature |
+| ---------------- | ----------- |
+| State            | `data()`    |
+| Berechnete Werte | `computed`  |
+| Logik            | `methods`   |
+| Listen           | `v-for`     |
+
+
 🧾 Produktmodell (Kurz)
 
 id
@@ -201,6 +218,19 @@ deliveryIn
 Produktbilder werden über S3-kompatiblen Storage (MinIO) gespeichert.
 
 application.properties
+
 minio.s3.access-key=root
 minio.s3.secret-key=secret
 minio.s3.endpoint=http://localhost:9000
+
+
+
+🚀 Ziel des Projekts
+
+Parallele Entwicklung von Frontend & Backend
+
+Saubere, skalierbare E-Commerce-Architektur
+
+Moderne Technologien (Reactive, Docker, Vue 3)
+
+Realistische Shop-Funktionalität inkl. Suche & Warenkorb
