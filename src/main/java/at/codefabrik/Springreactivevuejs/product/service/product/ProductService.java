@@ -132,7 +132,7 @@ public class ProductService {
             BigDecimal chfPrice = null;
             BigDecimal eurPrice = null;
             if (item.getPriceMapEs() != null) {
-                chfPrice = item.getPriceMapEs().get(item.getPriceMapEs().get("CHF"));
+                chfPrice = item.getPriceMapEs().get(MoneySymbol.CHF);
                 //eurPrice = item.getPriceMapEs().get(item.getPriceMapEs().get("EUR"));
             }
             return ProductDetailsResponse.builder()
@@ -154,8 +154,7 @@ public class ProductService {
                     //.price(item.getPriceMapEs().get(MoneySymbol.CHF))
                     .price(chfPrice)
                     //.price(eurPrice)
-                    .moneySymbol(MoneySymbol.CHF)
-                    //.moneySymbol(MoneySymbol.EUR)
+                    .moneyType(MoneySymbol.CHF.getSymbol())
                     .build();
         });
     }
