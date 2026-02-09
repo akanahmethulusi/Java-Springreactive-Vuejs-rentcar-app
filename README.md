@@ -4,22 +4,33 @@ Moderne **E-Commerce Webanwendung** mit **Spring Boot (Java 21, Reactive)** im B
 Der Fokus liegt auf **skalierbarer Architektur**, **Full-Text-Suche** und **klarer Trennung von Domänen**.
 
 ---
-Produkt List:
+
+## Produkt List:
 <img width="1466" height="831" alt="Bildschirmfoto 2026-02-09 um 13 18 03" src="https://github.com/user-attachments/assets/bbcc0b83-7a18-4816-8fc9-c438851b351c" />
 
-Produkt Detail:
+---
+
+## Produkt Detail:
 <img width="1383" height="828" alt="Bildschirmfoto 2026-02-05 um 12 05 05" src="https://github.com/user-attachments/assets/c2113f76-3fd3-4b36-b65e-4b445a86c3a0" />
 
-S3-Objekt Store:
+---
+
+## S3-Objekt Store:
 <img width="1435" height="788" alt="Bildschirmfoto 2026-02-05 um 12 05 37" src="https://github.com/user-attachments/assets/7af043c8-92ea-4724-b589-d5648c2968b1" />
 
-Backend-Produkt List:
+---
+
+## Backend-Produkt List:
 <img width="1089" height="875" alt="Bildschirmfoto 2026-02-05 um 12 05 56" src="https://github.com/user-attachments/assets/9431b851-8dcf-40f8-a28d-dd822807fe05" />
 
-Elasticsearch:
+---
+
+## Elasticsearch:
 <img width="996" height="777" alt="Bildschirmfoto 2026-02-05 um 12 08 13" src="https://github.com/user-attachments/assets/5813e602-f190-4289-b224-980f3016e0d5" />
 
-MongoDB:
+---
+
+## MongoDB:
 <img width="1442" height="740" alt="Bildschirmfoto 2026-02-05 um 12 09 07" src="https://github.com/user-attachments/assets/bc504c8d-bbb5-4082-b4d7-71bd342f5679" />
 
 
@@ -123,16 +134,16 @@ cd src/main/resources
 docker compose up -d
 
 
-
-🧪 Demo-Daten
+---
+## 🧪 Demo-Daten
 
 Beim Start der Anwendung werden automatisch 20 Beispielprodukte erzeugt.
 
 StartDemo/
  └─ ProduktDemoData.java
 
-
-🎨 Frontend – Setup
+---
+## 🎨 Frontend – Setup
 Installation:
 
 npm install -g @vue/cli
@@ -145,8 +156,8 @@ Frontend läuft unter:
 
 http://localhost:8080
 
-
-🔗 API-Kommunikation (Axios)
+---
+## 🔗 API-Kommunikation (Axios)
 
 yarn add axios vue-axios
 
@@ -161,8 +172,8 @@ import VueAxios from 'vue-axios'
 axios.defaults.baseURL = 'http://localhost:8080'
 createApp(App).use(VueAxios, axios).mount('#app')
 
-
-🧭 Routing
+---
+## 🧭 Routing
 
 Produktliste
 
@@ -172,8 +183,8 @@ Command:
 vue add router
 
 
-
-🛠️ Vue Best Practices
+---
+## 🛠️ Vue Best Practices
 
 | Zweck            | Vue Feature |
 | ---------------- | ----------- |
@@ -182,8 +193,8 @@ vue add router
 | Logik            | `methods`   |
 | Listen           | `v-for`     |
 
-
-🧾 Produktmodell (Kurz)
+---
+## 🧾 Produktmodell (Kurz)
 
 id
 
@@ -213,7 +224,8 @@ deliveryIn
 ✔️ Lieferzeit & Versandkosten per Service berechnet
 ✔️ Suche über Elasticsearch
 
-🗃️ File Storage (MinIO / S3)
+---
+## 🗃️ File Storage (MinIO / S3)
 
 Produktbilder werden über S3-kompatiblen Storage (MinIO) gespeichert.
 
@@ -224,8 +236,8 @@ minio.s3.secret-key=secret
 minio.s3.endpoint=http://localhost:9000
 
 
-
-🚀 Ziel des Projekts
+---
+## 🚀 Ziel des Projekts
 
 Parallele Entwicklung von Frontend & Backend
 
